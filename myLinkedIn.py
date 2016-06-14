@@ -9,12 +9,12 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from urllib.parse import urlparse 
 from urllib.parse import parse_qs
-from mySiteObject import MySiteObject
+import mySiteObject
 
-class MyLinkedIn(MySiteObject):
+class MyLinkedIn(mySiteObject.MySiteObject):
     def __init__(self, keyfile):
         
-        MySiteObject.__init__(self, keyfile)
+        mySiteObject.MySiteObject.__init__(self, keyfile)
         
         # Open a LinkedIn instance
         self.browser = webdriver.Chrome('/users/seanbarow/pySean/chromedriver')
